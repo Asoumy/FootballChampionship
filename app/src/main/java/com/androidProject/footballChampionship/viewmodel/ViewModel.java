@@ -1,0 +1,8 @@
+package com.androidProject.footballChampionship.viewmodel;
+
+/**
+ * Created by tofin on 21/04/16.
+ */
+public interface ViewModel {
+    void destroy();
+}
