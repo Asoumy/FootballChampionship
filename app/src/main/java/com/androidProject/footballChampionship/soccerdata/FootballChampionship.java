@@ -9,6 +9,6 @@ public class FootballChampionship extends Application {
     public void onCreate() {
         super.onCreate();
 
-//         FootballData.setApiKey("af484c207192455d8b5fbe28eb03a35c");
+         FootballData.setApiKey("af484c207192455d8b5fbe28eb03a35c");
     }
 }
