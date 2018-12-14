@@ -33,7 +33,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class FootballData {
     public final static String BASE_URL = "http://api.football-data.org/v1/";
-    private static String API_KEY = null;
+    private static String API_KEY = "af484c207192455d8b5fbe28eb03a35c";
     private static FootballData instance;
     private static FootballDataService service;
 
@@ -65,7 +65,7 @@ public class FootballData {
                     builder.removeHeader("User-Agent")
                             .addHeader("User-Agent", "com.project.footballdata");
                     if (API_KEY != null) {
-                        builder.addHeader("X-Auth-Token", API_KEY);
+                        builder.addHeader("X-Authenticated-Token", API_KEY);
                     }
                     return chain.proceed(builder.build());
                 }

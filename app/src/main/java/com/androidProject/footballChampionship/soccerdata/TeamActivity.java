@@ -97,7 +97,7 @@ public class TeamActivity extends AppCompatActivity
     }
 
     public void showData() {
-        mSvgLoader.load(team.getCrestUrl().toString(), mLogo, R.drawable.pl_logo);
+        mSvgLoader.load( team.getCrestUrl(), mLogo, R.drawable.pl_logo);
         mTitle.setText(team.getName());
         mSubTitle.setText(team.getSquadMarketValue());
     }
