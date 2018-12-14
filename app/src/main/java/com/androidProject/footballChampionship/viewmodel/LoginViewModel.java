@@ -8,11 +8,8 @@ import android.text.TextWatcher;
 import android.view.View;
 
 import com.androidProject.footballChampionship.model.ModelUser;
-import com.androidProject.footballChampionship.view.activity.MainActivity;
+import com.androidProject.footballChampionship.soccerdata.Main;
 
-/**
- * Created by tofin on 21/04/16.
- */
 public class LoginViewModel implements ViewModel {
     private Context context;
 
@@ -28,18 +25,18 @@ public class LoginViewModel implements ViewModel {
     }
 
     public void loginAuthentication(View view){
-        if ( (editTextUsernameValue.equals("admin")) && (editTextPasswordValue.equals("ihir"))) {
+        if ( (editTextUsernameValue.equals("admin")) && (editTextPasswordValue.equals("admin"))) {
             loginMessage.set("");
             loginMessageVisibility.set(View.INVISIBLE);
-            ModelUser user = new ModelUser (editTextUsernameValue, editTextPasswordValue);
-            context.startActivity(MainActivity.newIntent(context, user));
+//            ModelUser user = new ModelUser (editTextUsernameValue, editTextPasswordValue);
+//            context.startActivity(Main.newIntent(context, user));
 
         }else if ( (editTextUsernameValue.equals("")) || (editTextPasswordValue.equals(""))) {
             loginMessage.set("Username or Password can't be empty!");
             loginMessageVisibility.set(View.VISIBLE);
 
         } else {
-            loginMessage.set("Username = admin \n Password = ihir");
+            loginMessage.set("Username = admin \n Password = admin");
             loginMessageVisibility.set(View.VISIBLE);
         }
     }
